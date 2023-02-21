@@ -24,7 +24,9 @@ app.use('/api/auth/buyer', require('./routes/buyerAuth') );
 app.use('/api/auth/seller', require('./routes/sellerAuth') );
 app.use('/api/cars', require('./routes/cars'));
 
-
+app.get('*', (req, res) => {
+    res.sendFile( __filename + '/public/index.html' );
+});
 
 // Escuchar peticiones
 app.listen( process.env.PORT , () => {
