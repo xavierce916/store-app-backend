@@ -25,7 +25,7 @@ app.use('/api/auth/seller', require('./routes/sellerAuth') );
 app.use('/api/cars', require('./routes/cars'));
 
 app.get('*', (req, res) => {
-    res.sendFile( __filename + '/public/index.html' );
+    res.sendFile( __dirname + '/public/index.html' );
 });
 
 // Escuchar peticiones
